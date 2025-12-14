@@ -1,0 +1,87 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            font-family: 'Press Start 2P', cursive;
+        }
+        
+        #gameCanvas {
+            display: block;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 40px rgba(0, 200, 255, 0.3);
+        }
+        
+        .screen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 10;
+        }
+        
+        .btn {
+            font-family: 'Press Start 2P', cursive;
+            padding: 15px 30px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            transition: all 0.2s;
+            text-transform: uppercase;
+        }
+        
+        .btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .btn-play {
+            background: linear-gradient(135deg, #00d4aa 0%, #00a080 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 212, 170, 0.4);
+        }
+        
+        .btn-restart {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        .title {
+            font-size: 32px;
+            text-shadow: 4px 4px 0 #00a080, 0 0 20px rgba(0, 212, 170, 0.5);
+            margin-bottom: 30px;
+            animation: bounce 1s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .score-display {
+            font-size: 48px;
+            text-shadow: 3px 3px 0 #000;
+            margin: 20px 0;
+        }
+        
+        .high-score {
+            color: #ffd700;
+            text-shadow: 2px 2px 0 #b8860b;
+        }
+        
+        .instructions {
+            font-size: 10px;
+            color: #aaa;
+            margin-top: 20px;
+            line-height: 2;
+        }
