@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Clone</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css"></link>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <div class="relative">
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen">
+            <div class="title">FLAPPY<br>BIRD</div>
+            <div class="mb-8">
+                <span class="text-6xl">🐦</span>
+            </div>
+            <button class="btn btn-play" onclick="startGame()">PLAY</button>
+            <div class="instructions">
+                PRESS SPACE OR CLICK TO FLAP<br>
+                AVOID THE PIPES!
+            </div>
+        </div>
+        
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="screen hidden">
+            <div class="text-2xl mb-4 text-red-400">GAME OVER</div>
+            <div class="score-display" id="finalScore">0</div>
+            <div class="text-sm mb-2">SCORE</div>
+            <div class="score-display high-score text-3xl" id="highScoreDisplay">0</div>
+            <div class="text-xs mb-6 text-yellow-400">HIGH SCORE</div>
+            <div id="newHighScore" class="text-green-400 text-sm mb-4 hidden">🎉 NEW HIGH SCORE! 🎉</div>
+            <button class="btn btn-restart" onclick="restartGame()">RETRY</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
